@@ -1,17 +1,18 @@
 
 const input = document.querySelector('#validation-input')
 console.log(input)
-console.log(input.dataset.length)
+const rightLength = input.dataset.length;
+console.log(rightLength)
 input.addEventListener('blur', checkSymbolsQuantity)
 
 function checkSymbolsQuantity(event){ 
     const length = event.currentTarget.textLength
     console.log(length);
      
-    if (length === Number(input.dataset.length)) {
+    if (length === Number(rightLength)) {
         input.classList.remove('invalid')
-        return input.classList.add('valid'); 
+        input.classList.add('valid'); 
     }
             else
-        return input.classList.add('invalid'); 
+        input.classList.add('invalid'); 
 }

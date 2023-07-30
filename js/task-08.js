@@ -8,7 +8,7 @@ function SubmitHandler(event) {
     console.log(mail)
     const password = formElements.password.value;
     if (password.length ===0 || mail.length ===0) {
-        alert('всі поля повинні бути заповнені')
+       return alert('всі поля повинні бути заповнені')
     }
         const formData = { mail, password }
     console.log(formData);
